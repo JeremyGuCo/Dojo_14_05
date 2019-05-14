@@ -3,7 +3,7 @@
   <app-verbe #b="appVerbe"></app-verbe>
   <app-complement #c="appComplement"></app-complement>
 </div>
-<button>Generer une phrase !</button>
+<button (click)="sentenceFunc()" >Generer une phrase !</button>
 <p>
-  => {{a.selected}} {{b.selected}} {{c.selected}}
+  => {{sujet}} {{verbe}} {{complement}} 
 </p>

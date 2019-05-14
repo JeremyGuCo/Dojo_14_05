@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComplementComponent implements OnInit {
   complements: string[];
-  selected: string;
+  selected: string = 'AhAh';
 
   constructor() {
     this.complements = [
