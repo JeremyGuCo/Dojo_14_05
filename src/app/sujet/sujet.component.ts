@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sujet',
@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class SujetComponent implements OnInit {
   sujets: string[];
   selected: string;
+  @Output() public sujet: EventEmitter<any> = new EventEmitter();
 
   constructor() {
     this.sujets = [
@@ -29,7 +30,7 @@ export class SujetComponent implements OnInit {
   }
 
   setSelected(value: string) {
-    this.selected = value;
+    this.sujet.emit(value);
     console.log(`Sujet : ${this.selected}`);
   }
 

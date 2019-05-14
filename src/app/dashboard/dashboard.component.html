@@ -1,9 +1,9 @@
 <div>
-  <app-sujet #a="appSujet"></app-sujet>
-  <app-verbe #b="appVerbe"></app-verbe>
-  <app-complement #c="appComplement"></app-complement>
+  <app-sujet (sujet)="sujetFunc($event)"></app-sujet>
+  <app-verbe (verbe)="verbeFunc($event)"></app-verbe>
+  <app-complement (complement)="complementFunc($event)"></app-complement>
 </div>
-<button (click)="sentenceFunc()" >Generer une phrase !</button>
+<button>Generer une phrase !</button>
 <p>
   => {{sujet}} {{verbe}} {{complement}} 
 </p>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, } from '@angular/core';
 
 @Component({
   selector: 'app-complement',
@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ComplementComponent implements OnInit {
   complements: string[];
   selected: string = 'AhAh';
+  @Output() public complement: EventEmitter<any> = new EventEmitter();
 
   constructor() {
     this.complements = [
@@ -30,7 +31,7 @@ export class ComplementComponent implements OnInit {
   }
 
   setSelected(value: string) {
-    this.selected = value;
+    this.complement.emit(value);
     console.log(`Complement : ${this.selected}`);
   }
 
