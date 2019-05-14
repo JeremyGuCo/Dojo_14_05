@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-sujet',
   templateUrl: './sujet.component.html',
-  styleUrls: ['./sujet.component.css']
+  styleUrls: ['./sujet.component.css'],
+  exportAs: "appSujet"
 })
 export class SujetComponent implements OnInit {
   sujets: string[];

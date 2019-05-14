@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-complement',
   templateUrl: './complement.component.html',
-  styleUrls: ['./complement.component.css']
+  styleUrls: ['./complement.component.css'],
+  exportAs: "appComplement"
 })
 export class ComplementComponent implements OnInit {
   complements: string[];
